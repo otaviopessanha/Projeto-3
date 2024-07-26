@@ -2,8 +2,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html, body{
     height: 100%;
 }
+
+.clear{
+    clear: both;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 90vh;
+    max-height: 700px;
+    padding: 40px 2%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/capa.png');
+}
+
+header .logo{
+    float: left;
+    width: 160px;
+    height: 40px;
+    background-color: #ccc;
+}
+
+header nav{
+    float: right;
+}
+
+header li{
+    display: inline;
+    padding: 0 20px;
+}
+
+header li a{
+    color: white;
+    text-decoration: none;
+}
+
+.chamada1{
+    max-width: 600px;
+    float: right;
+    margin: 120px 90px;
+}
+
+.chamada1 h2{
+    font-size: 40px;
+    color: white;
+    font-weight: lighter;
+}
+
+.chamada1 p{
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+}
+/* /header */
