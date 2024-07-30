@@ -41,13 +41,17 @@ header nav{
     float: right;
 }
 
-header li{
+nav.mobile-menu{
+    display: none;
+}
+
+header nav.desktop-menu li{
     display: inline-block;
     padding: 9px 10px;
     height: 40px;
 }
 
-header li a{
+header nav.desktop-menu li a{
     color: white;
     text-decoration: none;
 }
@@ -75,7 +79,8 @@ header li a{
 section.section1{
     width: 100%;
     background-color: #472562;
-    padding: 0px 2%;
+    padding: 0 2%;
+    height: 400px;
 }
 
 section.section1 .container{
@@ -83,37 +88,44 @@ section.section1 .container{
 }
 
 .text-section1{
+    position: relative;
+    left: 45px;
     float: left;
     width: 50%;
+    margin-top: 40px;
+    padding-left: 60px;
     color: white;
 }
 
 .text-section1 h2{
     font-weight: lighter;
+    font-size: 26px;
 }
 
 .text-section1 p{
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 20px;
 }
 
 .text-section1 ul{
-    font-size: 13px;
+    font-size: 15px;
     list-style-position: inside;
 }
 
 .text-section1 ul li{
     float: left;
     width: 100%;
+    margin-top: 8px;
 }
 
 .text-section1 .btn1{
+    font-size: 13px;
     background-color: #ff703d;
     width: 165px;
     height: 44px;
     color: white;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 16px;
     text-align: center;
     line-height: 44px;
     border-radius: 30px;
@@ -121,10 +133,84 @@ section.section1 .container{
 
 .device-section1{
     float: left;
+    position: relative;
+    top: -30px;
     width: 50%;
-    height: 300px;
+    height: 430px;
     background-image: url('../images/device.png');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 100%;
 }
 /* /section1 */
+
+@media screen and (max-width: 768px){
+    header{
+        width: 100%;
+        height: auto;
+        min-height: 90vh;
+        /* max-height: 700px; */
+        padding: 40px 2%;
+    }
+    
+    nav.desktop-menu{
+        display: none;
+    }
+
+    nav.mobile-menu{
+        display: inline-block;
+    }
+    
+    .chamada1{
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        float: none;
+        margin: 100px 0;
+    }
+    
+    .chamada1 h2{
+        font-size: 30px;
+        padding: 0 10px;
+        color: white;
+        font-weight: lighter;
+    }
+    
+    .chamada1 p{
+        font-size: 15px;
+        color: white;
+        margin-top: 10px;
+    }
+    
+    section.section1{
+        padding: 40px 2%;
+        height: auto;
+        text-align: center;
+    }
+
+    .text-section1{
+        padding-left: 0;
+        width: 100%;
+        float: none;
+        margin-top: 0;
+        position: static;
+        display: inline-block;
+    }
+
+    .text-section1 ul{
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .text-section1 ul li{
+        float: none;
+        text-align: left;
+    }
+    
+    .btn1{
+        display: inline-block;
+    }
+
+    .device-section1{
+        display: none;
+    }
+}
